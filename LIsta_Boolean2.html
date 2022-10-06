@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="select_chuva">
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+    </select>
+
+    <select id="select_dinheiro">
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+    </select>
+
+    <select id="select_tempo">
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+    </select>
+
+    <select id="select_nuggets">
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+    </select>
+
+    <button onclick="exibir()">Devo ir ao McDonnald’s?</button> <br>
+
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    function exibir(){
+        var chuva = select_chuva.value;
+        var dinheiro = select_dinheiro.value;
+        var tempo = select_tempo.value;
+        var nuggets = select_nuggets.value;
+
+        if(!chuva == 'Sim' && !dinheiro == 'Sim' && tempo == 'Sim' || tempo == 'Sim' && nuggets == 'Sim'){
+            div_resultado.innerHTML = 'SIMMM! Você deve ir ao McDonnald’s...'
+        } else{
+            div_resultado.innerHTML = 'Infelizmente você não deve ir ao McDonnald’s... Deixe para a próxima.'
+        }
+
+    }
+</script>
